@@ -207,3 +207,13 @@ Ctrl + V 复制到当前激活的终端
 Shift + PgUp / PgDown 页面上下翻屏
 
 Ctrl + Home / End 滚动到页面头部或尾部
+
+
+代码
+! + Tab生成html5
+h1*6
+h1*6
+h$*6>{$标题}
+
+lorem 乱数假文
+p*6>lorem1 
