@@ -217,3 +217,11 @@ h$*6>{$标题}
 
 lorem 乱数假文
 p*6>lorem1 
+(h2>{章节1}+p>lorem
+
+(h2>{章节$}+p>lorem1000)*6
+a*6>{章节$}
+
+(h2[id="chapter$"]>{章节$}+p>lorem1000)*6
+
+a[href="#chapter$"]*6>{章节$}
