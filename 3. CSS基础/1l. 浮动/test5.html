@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            background: lightgreen;
+            padding: 30px;
+        }
+
+        .container .item {
+            width: 200px;
+            height: 200px;
+            background: greenyellow;
+            margin: 6px;
+            float: left;
+        }
+
+        /* 方式二 */
+        /* 伪元素 默认时行盒要改成块盒*/
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container"> -->
+    <!-- 方式二 不用加空的div 加一个伪元素-->
+    <div class="container clearfix">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <!-- 方式一 加一个空的div -->
+        <!-- 此clear的  div必定出现在float元素的下方 此div撑高了container的高度  -->
+        <!-- <div class="clearfix"></div>   -->
+    </div>
+</body>
+
+</html>
