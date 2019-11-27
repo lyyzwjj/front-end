@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .d1 {
+            width: 1000px;
+            height: 300px;
+            padding: 30px;
+            border: 20px solid;
+            /* position: relative; */
+        }
+
+        .d2 {
+            width: 800;
+            height: 200px;
+            padding: 30px;
+            border: 2px solid;
+        }
+        /* 第一个定位祖先元素的填充盒为包含块 填充盒（填充区+内容区）*/
+        .d3 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left:0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+        <div class="d2">
+            <div class="d3"></div>
+        </div>
+    </div>
+</body>
+
+</html>
