@@ -225,3 +225,5 @@ a*6>{章节$}
 (h2[id="chapter$"]>{章节$}+p>lorem1000)*6
 
 a[href="#chapter$"]*6>{章节$}
+
+section*5>(h2>{章节$})+(p*3>lorem)
