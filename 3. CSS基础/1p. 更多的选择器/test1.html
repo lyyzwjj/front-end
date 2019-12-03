@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li:first-child {
+            color: red;
+        }
+
+        /* 选中a元素，并且a元素必须是第一个子元素 */
+        a:first-child {
+            color: red;
+        }
+
+        /* 选中的是子元素中第一个a元素 */
+        a:first-of-type {
+            color: greenyellow;
+        }
+
+        /*选中a元素，并且a元素必须是最后一个子元素  */
+        a:last-child {
+            color: gray;
+        }
+
+       li:last-of-type {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>Lorem.</li>
+            <li>Odit.</li>
+            <li>Suscipit?</li>
+            <li>Harum.</li>
+            <li>Hic.</li>
+            <li>Suscipit!</li>
+            <li>Accusantium!</li>
+            <li>Sunt!</li>
+            <li>Facere?</li>
+            <li>Reiciendis!</li>
+            <p></p>
+        </ul>
+        <nav>
+            <p></p>
+            <a href="">Lorem.</a>
+            <a href="">Voluptatem.</a>
+            <a href="">Eos!</a>
+            <a href="">Aliquam.</a>
+            <a href="">Ratione!</a>
+            <a href="">Consectetur.</a>
+            <a href="">Iure?</a>
+            <a href="">Qui?</a>
+            <a href="">Voluptatibus?</a>
+            <a href="">Dolor.</a>
+        </nav>
+    </div>
+</body>
+
+</html>
