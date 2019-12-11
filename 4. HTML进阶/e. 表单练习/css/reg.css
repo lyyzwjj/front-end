@@ -1,0 +1,107 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.form {
+    width: 980px;
+    margin: 1em auto;
+}
+
+.form h2 {
+    text-align: center;
+    font-size: 38px;
+    border-bottom: 1px solid #ddd;
+    height: 19px;
+    margin-bottom: 30px;
+}
+
+.form h2 span {
+    background: #fff;
+    padding: 0 20px;
+}
+
+/* 表单区域 */
+
+.form-area {
+    width: 423px;
+    margin: 0 auto;
+}
+
+.form-area .form-item {
+    margin: 50px 0;
+}
+
+.form-area .select .select-item, .form-area .select .input {
+    float: left;
+    height: 40px;
+}
+
+.form-area .select .select-item {
+    width: 140px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    border-right: none;
+    position: relative;
+}
+
+.form-area .select .select-item ul {
+    /* 最大高度256像素 */
+    max-height: 256px;
+    background: #fff;
+    position: absolute;
+    /* 绝对定位然后z-index就能遮掉下面部分 */
+    z-index: 1;
+    left: 0;
+    top: 50px;
+    color: #606266;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    padding: 10px 0;
+}
+
+.form-area .select .input input {
+    border-radius: 0 4px 4px 0;
+}
+
+.form-area .select .input {
+    width: 283px;
+}
+
+.form-area .select .select-item .title {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    color: #909399;
+}
+
+/* 统一文本样式 */
+
+input[type="text"], input[type="password"] {
+    border: 1px solid #dcdfe6;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 4px;
+    text-indent: 1em;
+    font-size: 14px;
+    color: #606266;
+    font-family: "PingFangSC-Medium";
+}
+
+input[type="text"]:hover, input[type="password"]:hover {
+    border-color: #c0c4cc;
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    color: #ccc;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #00a1d6;
+    outline: 0;
+}
