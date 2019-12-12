@@ -4,6 +4,14 @@
     clear: both;
 }
 
+body {
+    line-height: 1.5;
+}
+
+.form a {
+    color: #00a1d6;
+}
+
 .form {
     width: 980px;
     margin: 1em auto;
@@ -13,8 +21,8 @@
     text-align: center;
     font-size: 38px;
     border-bottom: 1px solid #ddd;
-    height: 19px;
-    margin-bottom: 30px;
+    height: 30px;
+    margin-bottom: 60px;
 }
 
 .form h2 span {
@@ -31,6 +39,7 @@
 
 .form-area .form-item {
     margin: 50px 0;
+    position: relative;
 }
 
 .form-area .select .select-item, .form-area .select .input {
@@ -48,6 +57,7 @@
 }
 
 .form-area .select .select-item ul {
+    display: none;
     /* 最大高度256像素 */
     max-height: 256px;
     background: #fff;
@@ -62,6 +72,24 @@
     border: 1px solid #dcdfe6;
     border-radius: 4px;
     padding: 10px 0;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+.form-area .select .select-item ul li {
+    height: 34px;
+    padding: 0 20px;
+    cursor: pointer;
+    line-height: 34px;
+}
+
+.form-area .select .select-item ul li.active {
+    color: #00a1d6;
+    font-weight: bold;
+}
+
+.form-area .select .select-item ul li:hover {
+    background: #f5f7fa;
 }
 
 .form-area .select .input input {
@@ -77,9 +105,43 @@
     line-height: 40px;
     padding: 0 20px;
     color: #909399;
+    cursor: pointer;
 }
 
-/* 统一文本样式 */
+.form-area .readme {
+    margin: -40px 0;
+    font-size: 12px;
+}
+
+.form-area .readme .checkbox {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-area .readme input {
+    display: none;
+}
+
+.form-area .readme input:checked+.checkbox {
+    border-color: #00a1d6;
+}
+
+.form-area .readme input:checked+.checkbox::after {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    background: #00a1d6;
+    border-radius: 2px;
+    margin-left: 2.5px;
+    margin-top: 2.5px;
+}
+
+/* 统一文本框样式 */
 
 input[type="text"], input[type="password"] {
     border: 1px solid #dcdfe6;
@@ -104,4 +166,78 @@ input[type="text"]::placeholder, input[type="password"]::placeholder {
 input[type="text"]:focus, input[type="password"]:focus {
     border-color: #00a1d6;
     outline: 0;
+}
+
+/* 统一设置按钮样式 */
+
+button {
+    height: 40px;
+    background: #00a1d6;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+}
+
+button.fill {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background: #33b4de;
+}
+
+.form-area .form-item .btn-sncode {
+    height: 36px;
+    width: 130px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+
+.form-area .form-item .error {
+    position: absolute;
+    width: 240px;
+    right: -250px;
+    top: 10px;
+    font-size: 12px;
+    color: #f45d90;
+    display: none;
+    /* top: 0px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center; */
+}
+
+/* 双标记显示 */
+
+.form-area .form-item.haserror .error{
+    display: block;
+}  
+.form-area .form-item.haserror input{
+    border-color: #f45d90;
+}  
+
+.txtright {
+    text-align: right;
+}
+
+button:disabled{
+    background: #f5f5f5;
+    color: rgba(0, 0, 0, .25);
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    cursor: not-allowed;
+}
+
+.topbanner{
+    width: auto;
+    position: relative;
+}
+.topbanner img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
