@@ -232,14 +232,25 @@ button:disabled {
     cursor: not-allowed;
 }
 
-.topbanner {
-    width: auto;
-    position: relative;
+/* .topbanner {
+   text-align: center;
+   background-color: #00a1d8;
 }
 
 .topbanner img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
+    margin: 0  auto;
+} */
+
+.topbanner {
+    text-align: center;
+    background-color: #00a1d8;
+ }
+ 
+ .topbanner img {
+     float: left;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     margin: auto;
+ }
