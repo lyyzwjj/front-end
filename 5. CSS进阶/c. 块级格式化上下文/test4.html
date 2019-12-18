@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            /* overflow: hidden; */
+            float: left;
+            background: #008c8c;
+            position: relative;
+        }
+
+        /* 绝对定位自动定位  自定计算高度是不可能考虑这些元素 彻底脱离常规流 */
+        .item {
+            /* float: left; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 20px;
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>
