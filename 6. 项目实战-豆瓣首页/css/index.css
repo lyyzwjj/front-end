@@ -1,0 +1,49 @@
+@import "reset.css";
+@import "common.css";
+@import "//at.alicdn.com/t/font_1576942_ovti3642tjo.css";
+/* 首页通用样式 */
+
+.container {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 首页通用样式结束 */
+
+/* 页头开始 */
+
+.header {
+    height: 90px;
+}
+
+/* .header .logo, .header .menu, .header .search {
+    height: 30px;
+    border: 2px solid;
+} */
+
+.header .logo a {
+    width: 154px;
+    height: 30px;
+    display: block;
+    background: url("../img/logo_db.png") no-repeat;
+}
+
+.header .logo a span {
+    display: none;
+}
+
+/* 页头结束 */
