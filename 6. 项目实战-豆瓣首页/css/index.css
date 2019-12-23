@@ -1,6 +1,14 @@
 @import "reset.css";
 @import "common.css";
 @import "//at.alicdn.com/t/font_1576942_ovti3642tjo.css";
+/* 统一样式 */
+
+button {
+    cursor: pointer;
+}
+
+/* 统一样式结束 */
+
 /* 首页通用样式 */
 
 .container {
@@ -28,6 +36,8 @@
 
 .header {
     height: 90px;
+    padding-top: 30px;
+    box-sizing: border-box;
 }
 
 /* .header .logo, .header .menu, .header .search {
@@ -35,15 +45,114 @@
     border: 2px solid;
 } */
 
+/* 设置padding-top再溢出隐藏 藏掉文字*/
+
 .header .logo a {
     width: 154px;
-    height: 30px;
+    height: 0;
+    overflow: hidden;
+    padding-top: 30px;
     display: block;
-    background: url("../img/logo_db.png") no-repeat;
+    background: url("../img/logo_db.png") no-repeat left top/100%;
+    /* background-size: 50%; */
 }
 
-.header .logo a span {
-    display: none;
+/* 另一种隐藏文字的方式 */
+
+/* .header .logo a span {
+    display: none;‹
+} */
+
+.header .search {
+    width: 270px;
+    height: 30px;
+    border: 1px solid #c3c3c3;
+    margin-left: 20px;
+    position: relative;
+}
+
+.header .search .txt {
+    width: 240px;
+    height: 20px;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.header .search .txt::placeholder {
+    color: #ccc;
+}
+
+.header .search button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    right: 0px;
+    color: #c3c3c3;
+}
+
+/* 行盒设置宽高 变成块盒 */
+
+/* 设置背景图宽高 */
+
+.header .menu {
+    margin-top: 6p‹x;
+}
+
+.header .menu a {
+    background: url("../img/nav_logo.png") no-repeat left top/463px 20px;
+    width: 40px;
+    height: 20px;
+    float: left;
+    margin-left: 20px;
+}
+
+.header .menu .menu-read {
+    background-position: 0 0;
+}
+
+.header .menu .menu-movie {
+    background-position: -60px 0;
+}
+
+.header .menu .menu-music {
+    background-position: -120px 0;
+}
+
+.header .menu .menu-group {
+    background-position: -180px 0;
+}
+
+.header .menu .menu-city {
+    background-position: -240px 0;
+}
+
+.header .menu .menu-fm {
+    background-position: -300px 0;
+}
+
+.header .menu .menu-time {
+    background-position: -360px 0;
+}
+
+.header .menu .menu-doupin {
+    background-position: -420px 0;
+    width: 44px;
+}
+
+/* 重置文本框 */
+
+button, input {
+    border: none;
+    outline: none;
+    outline-offset: 0;
+}
+
+/* 重置按钮 */
+
+button {
+    background: initial;
+    padding: 0;
 }
 
 /* 页头结束 */
