@@ -1,6 +1,6 @@
 @import "reset.css";
 @import "common.css";
-
+@import "//at.alicdn.com/t/font_1576942_ovti3642tjo.css";
 /* 统一样式 */
 
 button {
@@ -16,6 +16,19 @@ button {
     margin: 0 auto;
 }
 
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 
 /* 首页通用样式结束 */
 
