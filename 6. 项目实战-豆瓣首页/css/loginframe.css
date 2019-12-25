@@ -256,6 +256,10 @@ input[type="text"].more-text-indent {
     background: url("../img/icon-pc.png") no-repeat left top/100% 100%;
 }
 
+.container .change:hover+.pointer {
+    display: block;
+}
+
 .container .pointer {
     position: absolute;
     height: 28px;
