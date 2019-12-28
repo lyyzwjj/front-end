@@ -10,6 +10,25 @@ button {
     cursor: pointer;
 }
 
+a {
+    color: #37a;
+}
+
+a:hover {
+    background-color: #37a;
+    color: #fff;
+}
+
+a:active {
+    color: #fff;
+    text-decoration: none;
+    background: #f93;
+}
+
+ul {
+    word-break: break-all;
+}
+
 /* 统一样式结束 */
 
 /* 首页通用样式 */
@@ -17,6 +36,68 @@ button {
 .container {
     width: 950px;
     margin: 0 auto;
+}
+
+.section {
+    padding: 35px 0;
+}
+
+.section:nth-child(even) {
+    background: #f7f7f7;
+}
+
+.aside-left {
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.aside-right {
+    float: right;
+    width: 265px;
+    margin-left: 30px;
+}
+
+.main {
+    /* 创建BFC */
+    overflow: hidden;
+}
+
+.adv img {
+    width: 100%;
+    display: block;
+}
+
+.section-title {
+    margin: 12px 0;
+}
+
+.section-title .title {
+    display: inline;
+    color: #072;
+    font-size: 15px;
+}
+
+.section-title .title::after {
+    content: " · · · · · · ";
+}
+
+.section-title .link {
+    font-size: 12px;
+}
+
+.section-title .link::before {
+    content: "(";
+}
+
+.section-title .link::after {
+    content: ")";
+}
+
+.adv-tag::after {
+    content: "广告";
+    color: #c9c9c9;
+    font-size: 13px;
 }
 
 /* 首页通用样式结束 */
@@ -58,6 +139,7 @@ button {
     border: 1px solid #c3c3c3;
     margin-left: 20px;
     position: relative;
+    line-height: normal;
 }
 
 .header .search .txt {
@@ -149,9 +231,14 @@ button {
 /* 横幅开始 */
 
 .banner {
-    height: 304px;
     /* 写背景图片的时候可以同时设置背景颜色 */
-    background: url("../img/banner-bg.jpg") no-repeat 120px top/auto 100% #edf4ed;
+    height: 304px;
+    /* background-size: contain;
+    background-position: calc(50% - 305px) top;
+    background-color: #edf4ed;
+    background-repeat: no-repeat;
+    background-image: url("../img/banner-bg.jpg"); */
+    background: url("../img/banner-bg.jpg") no-repeat calc(50% - 305px) top / contain #edf4ed;
 }
 
 .banner .container .loginarea {
@@ -224,3 +311,86 @@ button {
 }
 
 /* 横幅结束 */
+
+/* 热门区域 */
+
+.hot-list {
+    line-height: 1.5;
+}
+
+.hot-list li {
+    margin-bottom: 15px;
+}
+
+.hot-list li .title {
+    font-size: 14px;
+}
+
+.hot-list li .desc {
+    font-size: 13px;
+    color: #aaaaaa;
+}
+
+/* 除了第一个以外的 */
+
+/* .hot-list li .desc .span:nth-child(n+2) {
+    margin-right: 4px;
+} */
+
+.hot-list li .desc .span {
+    margin-right: 4px;
+}
+
+.hot-main .float-left {
+    width: 350px;
+}
+
+.hot-main ul {
+    /* 不会影响最后一行 */
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.hot-main ul::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.hot-main .float-left li {
+    display: inline-block;
+    width: 170px;
+    font-size: 12px;
+    margin: 20px 0;
+    vertical-align: top;
+}
+
+.hot-main .float-left li .img img {
+    width: 100%;
+    display: block;
+}
+
+.hot-main .float-left li .words span {
+    color: #999;
+}
+
+.hot-main .float-right {
+    width: 275px;
+    font-size: 12px;
+    /* 设置bfc自动避开浮动元素 本身是浮动元素不行*/
+    /* overflow: hidden; */
+}
+
+.hot-main .float-right li {
+    margin-bottom: 12px;
+}
+
+.hot-main .float-right li .title {
+    color: #999;
+}
+
+.hot-main .float-right Îli .desc {
+    color: #666;
+}
+
+/* 热门区域结束 */
