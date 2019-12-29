@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 必须是a元素，必须是第五个子元素 （并非第五个a元素） */
+        a:nth-child(5) {
+            color: red;
+        }
+
+        /* 须是a元素，必须是第3数个子元素 （并非第五个a元素） */
+        /* 偶数2你 也可以用even代替 */
+        /* a:nth-child(even) {
+            color: red;
+        } */
+
+        a:nth-of-type(3n) {
+            color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <p>发发发</p>
+        <a href="">Lorem.</a>
+        <a href="">Voluptatem.</a>
+        <a href="">Eos!</a>
+        <a href="">Aliquam.</a>
+        <p>发发发</p>
+        <a href="">Ratione!</a>
+        <a href="">Consectetur.</a>
+        <a href="">Iure?</a>
+        <p>发发发</p>
+        <a href="">Qui?</a>
+        <a href="">Voluptatibus?</a>
+        <a href="">Dolor.</a>
+    </nav>
+</body>
+
+</html>
