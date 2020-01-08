@@ -155,13 +155,50 @@ ul {
     display: inline-block;
 }
 
+.menu-adv {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
 .app-icon-1 {
     width: 50px;
     height: 50px;
     display: block;
     background: url("../img/app_icons.jpg") no-repeat;
-    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .2);
-    border-radius: 6px;
+    box-shadow: 1px 1px 2px #999;
+    border-radius: 10px;
+}
+
+.app-icon-2 {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: url("../img/app_icons.jpg") no-repeat;
+    box-shadow: 1px 1px 2px #999;
+    border-radius: 10px;
+    background-position: -250px 0;
+}
+
+.app-icon-3 {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: url("../img/app_icons.jpg") no-repeat;
+    box-shadow: 1px 1px 2px #999;
+    border-radius: 10px;
+    background-position: -50px 0;
+}
+
+.group .group-name a {
+    color: #333;
+}
+
+.group .group-name a::after {
+    content: "»";
+}
+
+.group .right-menu-list li {
+    margin-right: 10px;
 }
 
 /* 首页通用样式结束 */
@@ -563,12 +600,6 @@ button {
     text-overflow: ellipsis;
 }
 
-.movie-area .star .number {
-    font-size: 12px;
-    margin-left: 7px;
-    color: #e09015;
-}
-
 .movie-area .func {
     margin-top: 7px;
 }
@@ -598,18 +629,6 @@ button {
 
 .group-area a:active {
     color: #fff ! important;
-}
-
-.group-area .group .group-name a {
-    color: #333;
-}
-
-.group-area .group .group-name a::after {
-    content: "»";
-}
-
-.group-area .group .right-menu-list li {
-    margin-right: 10px;
 }
 
 .group-area .main .item-list {
@@ -652,11 +671,6 @@ button {
 /* 小组结束 */
 
 /* 读书开始 */
-
-.book-area .menu-adv {
-    margin-top: 20px;
-    font-size: 12px;
-}
 
 .book-area a {
     color: #494949;
@@ -715,3 +729,243 @@ button {
 }
 
 /* 读书结束 */
+
+/* 音乐开始 */
+
+.music-area a {
+    color: #555d53;
+}
+
+.music-area a:hover, .music-area a:active {
+    color: #fff;
+}
+
+.music-area .aside-left .title a {
+    color: #f38c00;
+}
+
+.music-area .aside-left .title a:hover, .music-area .aside-left .title a:active {
+    color: #fff;
+}
+
+.music-area .music-player-list li {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.music-area .music-player-list li .number {
+    font-size: 12px;
+    color: #111;
+}
+
+.music-area .music-player-list li .player {
+    width: 240px;
+}
+
+.music-area .music-player-list li .player .img {
+    width: 48px;
+    height: 48px;
+    position: relative;
+}
+
+/* 图片占满 */
+
+.music-area .music-player-list li .player .img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.music-area .music-player-list li .player .img::before {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .85);
+    color: #fff;
+    text-align: center;
+    line-height: 48px;
+}
+
+.music-area .music-player-list li .player .img:hover::before {
+    display: block;
+}
+
+.music-area .music-player-list li .player .words {
+    width: 180px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.music-area .music-player-list li .player .words span {
+    display: block;
+    color: #999;
+    line-height: 1.7;
+}
+
+.music-area .item-list li {
+    width: 130px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 40px;
+}
+
+.music-area .item-list li .img {
+    width: 80px;
+    /* 块盒高度居中 */
+    margin: 0 auto;
+}
+
+.music-area .item-list li .words {
+    margin: 4px 0;
+}
+
+.music-area .item-list.hot-music li .words {
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.music-area .item-list.hot-music li .img {
+    position: relative;
+}
+
+.music-area .item-list.hot-music li .img::before {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    font-size: 33px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+/* 音乐结束 */
+
+/* 豆品开始 */
+
+.doupin-area .aside-left .title a {
+    color: #1f9432;
+}
+
+.doupin-area .aside-left .title a:hover, .doupin-area .aside-left .title a:active {
+    color: #fff;
+}
+
+.doupin-area .aside-right {
+    font-size: 14px;
+}
+
+.doupin-area .main .item-list li {
+    width: 240px;
+    margin-right: 20px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.doupin-area .main .item-list li .words {
+    margin-top: 10px;
+}
+
+.doupin-area .main .item-list li .words span {
+    color: #e55457;
+}
+
+/* 豆品结束 */
+
+/* 同城开始 */
+
+.city-area a {
+    color: #643;
+}
+
+.city-area a:hover, .city-area a:active {
+    color: #fff;
+}
+
+.city-area .aside-left .title a {
+    color: #ec5353;
+}
+
+.city-area .aside-left .title a:hover, .city-area .aside-left .title a:active {
+    color: #fff;
+}
+
+.city-area .item-list li {
+    width: 248px;
+    margin-right: 20px;
+    margin-bottom: 60px;
+}
+
+.city-area .item-list li:nth-child(even) {
+    margin-right: 0;
+}
+
+.city-area .item-list li .img {
+    margin-right: 10px;
+}
+
+.city-area .item-list li .words {
+    overflow: hidden;
+}
+
+.city-area .item-list li .words a {
+    font-size: 13px;
+}
+
+.city-area .item-list li .words span {
+    font-size: 12px;
+    /* 块盒换行 */
+    display: block;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* 同城结束 */
+
+/* 页脚开始 */
+
+.footer {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #999;
+}
+
+.footer .container {
+    border-top: 1px dashed #dcdcdc;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.footer .float-left img {
+    width: 15px;
+    vertical-align: middle;
+}
+
+.footer .float-left, .footer .float-right {
+    width: 50%;
+}
+
+.footer .float-right .menu a {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.footer .float-right .menu a:first-child {
+    margin-left: 0;
+}
+
+.footer .adv {
+    width: 150px;
+    margin-top: 20px;
+}
+
+/* 页脚结束 */
