@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var arr = [1, 1, 1, 11, 11, , 2, 2, 2, 22, 33, 344, 55, 66]
+        Array.prototype.unique = function () {
+            var temp = {};
+            var newArr = [];
+            arr.forEach(element => {
+                if(!temp[element]){
+                    temp[element]='abc';
+                    newArr.push(element);
+                }
+            });
+            return newArr;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script> 
+        function test() {
+            var arr = [];
+            for (var i = 0; i < 10; i++) {
+                // var j = i;
+                // arr[i] = function () {
+                //     console.log(i);
+                // }
+                // 闭包 里面的函数被保存在外面  里面函数比外面的函数存在时间长
+                // 立即执行函数具备函数一切特点  也能产生作用域
+                // 立即执行函数入参j在函数定义的时候就已经被确定了0-9
+                // j每次接收i
+                (function (j) {
+                    arr[i] = function () {
+                        console.log(j);
+                    }
+                }(i)); 
+            }
+            return arr;
+        }
+        var myArr = test();
+        for (var j = 0; j < 10; j++) {
+            myArr[j]();
+        }
+    </script> 
+
+</head>
+
+<body>
+
+</body>
+
+</html>
