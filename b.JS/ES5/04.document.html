@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="only"></div>
+    <div name="only"></div>
+    <div class="only"></div>
+    <div>
+        <strong></strong>
+    </div>
+    <div>
+        <span>
+            <strong class="demo">123</strong>
+        </span>
+    </div>
+</body>
+<script type="text/javascript">
+    "use strict"
+    // document代表整个文档
+    // 1. 根据id IE8以下不区分id大小写 且id没有还会找name=only的元素
+    var div_id = document.getElementById('only');
+    // 2. 根据标签  选出来的是一切数组都是类数组
+    var divs_tag = document.getElementsByTagName('div');
+    var div_tag = divs_tag[0];
+    // 3. 根据名字，只有部分标签name可生效（表单，表单元素，img,iframe）最新的浏览器都可以取到了
+    var divs_name = document.getElementsByName('only');
+    // 4. 根据类名, ie8及ie8以下版本中没有
+    var divs_class = document.getElementsByClassName('only');
+    // 5. css选择器 ie7和ie7以下版本没有 一个
+    var strong = document.querySelector('div > span strong.demo');
+    // 6. css选择器 ie7和ie7以下版本没有
+    var strong1 = document.querySelectorAll('div > span strong.demo');
+</script>
+
+</html>
