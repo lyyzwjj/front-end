@@ -4,3 +4,4 @@ modules.xml
 vsc.xml
 .idea
 .DS_Store
+c.TS/*.js
