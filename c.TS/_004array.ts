@@ -1,9 +1,9 @@
-let _003a: number[] = [1, 2, 3, 4]
-let _003b: string[] = ['a', 'b', 'c']
+let _004a: number[] = [1, 2, 3, 4]
+let _004b: string[] = ['a', 'b', 'c']
 // 超过索引边界取值也不报错 打印undefined
-console.log(_003a[3], _003b[-1], _003b[3])
-for (let i = 0; i < _003a.length; i++) {
-    console.log(_003a[i])
+console.log(_004a[3], _004b[-1], _004b[3])
+for (let i = 0; i < _004a.length; i++) {
+    console.log(_004a[i])
 }
 /* if 
 1、对象， 只要这个对象不为null，就会被计算为 true
@@ -13,7 +13,7 @@ for (let i = 0; i < _003a.length; i++) {
 5、数字， 如果是 +0，-0， NaN，则会被计算为 false ，否则为 true
 6、字符串， 如果是空字符串 ”“ ，为 false，否则为 true
 */
-if (_003a) {
+if (_004a) {
     console.log('a is not empty')
 } else {
     console.log('a is empty')
@@ -48,7 +48,7 @@ empty_array.push(5) // 1,2,5
 console.log(empty_array)
 
 // 子数组
-const _004a = [0, 1, 2, 3, 4, 5, 6, 7]
+_004a = [0, 1, 2, 3, 4, 5, 6, 7]
 console.log(_004a.slice(2, 5)) // [ 2, 3, 4 ]
 console.log(_004a.slice(5, 10)) // [ 5, 6, 7 ] 取不到了就没有了 也不报错
 
