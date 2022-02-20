@@ -23,7 +23,7 @@ var HTTPStatus;
 })(HTTPStatus || (HTTPStatus = {}));
 */
 
-function processHttpStatus(s: HTTPStatus) {
+function _003processHttpStatus(s: HTTPStatus) {
     if (s === HTTPStatus.OK) {
         console.log('good response')
     } else {
@@ -37,7 +37,7 @@ function processHttpStatus(s: HTTPStatus) {
     console.log(s)
     console.log(HTTPStatus[s]) // 打印undefined 因为不存在
 }
-processHttpStatus(HTTPStatus.INTERNAL_SERVER_ERROR)
+_003processHttpStatus(HTTPStatus.INTERNAL_SERVER_ERROR)
 
 
 enum TimingFunction {

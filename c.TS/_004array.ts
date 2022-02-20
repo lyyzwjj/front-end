@@ -70,7 +70,7 @@ console.log('index of 8, ', _004a.indexOf(8, 3)) // 5 从索引3开始找 找到
 // lastIndexOf 从后往前找
 console.log('index of 8, ', _004a.lastIndexOf(8)) // 5
 
-console.log('\n\n\n')
+console.log('\n')
 console.log('============= array sort =============')
 _004a.sort()
 console.log(_004a) //  0, 1, 10, 7, 8, 8,  9   不是数字大小排列 而是字典顺序
@@ -79,7 +79,7 @@ let _004dict = ['dog', 'cat', 'scorpion', 'pig']
 _004dict.sort()
 console.log(_004dict)
 
-console.log('\n\n\n')
+console.log('\n')
 console.log('============= tuple =============')
 
 // 元组 tuple
@@ -88,7 +88,46 @@ const [_004c1, _004c2, _004c3, _004c4] = _004c
 console.log(_004c1, _004c2, _004c3, _004c4)
 
 
-console.log('\n\n\n')
+console.log('\n')
 console.log('============= split/join =============')
 console.log('split: ', 'a,b,c,1,2,3'.split(','))
 console.log('join: ', ['a', 'b', 'c', 1, 2, 3].join(' '))
+
+console.log('\n')
+console.log('============= forEach =============')
+
+
+const _004a1 = [1, 2, 3, 4]
+_004a1.forEach(v => {
+    console.log(v)
+})
+// const _004b1: number[] = []
+// _004a1.forEach(v => {
+//     _004b1.push(v * v)
+// })
+
+const _004b1 = _004a1.map(v => v * v)
+console.log(_004b1)
+
+// let _004sum = 0
+// _004b1.forEach(v => _004sum += v)
+const _004sum = _004b1.reduce((s, v) => s + v)
+console.log(_004sum)
+
+// 自己实现reduce
+function myReduce(b: number[], r: (s: number, v: number) => number) {
+    let previousValue = 0
+    b.forEach(currentValue => {
+        previousValue = r(previousValue, currentValue)
+    })
+    return previousValue
+}
+const _004sum1 = myReduce(_004b1, (a, b) => a + b)
+console.log(_004sum1)
+
+// 此方法可并行执行
+console.log(
+    [1, 2, 3, 4]
+        .map(v => v * v)
+        .reduce((s, v) => s + v)
+)

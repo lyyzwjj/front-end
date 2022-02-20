@@ -62,7 +62,6 @@ console.log('============= 可变参数 数组传参自动拆包 =============')
 const numbers = [6, 7, 8, 9, 10]
 console.log(add5(2, 3, 4, 5, ...numbers))
 console.log('\n')
-
 console.log('============= 函数重载 =============')
 
 function acrl(a: number, b: number): number
@@ -81,3 +80,51 @@ console.log(acrl(2, 3, 4))
 console.log(acrl(2, 3, 4, 5, 6))
 const numbers1 = [6, 7, 8, 9, 10]
 console.log(acrl(2, 3, 4, 5, ...numbers1))
+
+
+console.log('\n')
+console.log('============= 对象参数 =============')
+function sendRequest(params: {
+    url: string,
+    method: 'GET' | 'POST' | 'PUT'
+    header: object,
+    data?: string,
+    requireAuth: boolean,
+    retry: boolean,
+    retryTimeout: number
+}) {
+
+}
+
+sendRequest({
+    url: "https://www.test.com",
+    method: 'GET',
+    header: {
+        contentType: 'application/json',
+    },
+    data: '{}',
+    requireAuth: false,
+    retry: true,
+    retryTimeout: 30000,
+})
+
+
+console.log('\n')
+console.log('============= 对象定义函数 =============')
+
+function registerEmployee(p: any) {
+    return p
+}
+const _006emp = registerEmployee({
+    name: 'john',
+    salary: 8000,
+    bouns: undefined as (number | undefined),
+    performance: 3.5,
+    updateBonus() {
+        if (!this.bouns) {
+            this.bouns = this.salary * this.performance
+        }
+    }
+})
+_006emp.updateBonus()
+console.log(_006emp)
