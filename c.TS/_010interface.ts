@@ -158,3 +158,83 @@ processElement1({
     width: 1,
     height: 1
 })
+
+
+interface Constructor {
+    (options: number): void
+}
+declare let Ccc: Constructor
+var xxxx = Ccc(123)
+console.log(xxxx)
+
+
+/*
+ 
+// TypeScript 接口中有很多方式来声明变量的结构。
+// 以下两个是等效声明, 第一个使用内联注解，第二个使用接口：
+
+// Sample A
+declare const myPoint: { x: number; y: number };
+
+// Sample B
+interface Point {
+  x: number;
+  y: number;
+}
+declare const myPoint: Point;
+
+*/
+
+/*
+// 示例 B 的好处在于，如果有人创建了一个基于 myPoint 的库来添加新成员, 他们可以轻松将此成员添加到 myPoint 的现有声明中:
+// 因为 TypeScript 接口是开放式的，这是 TypeScript 的一个重要原则，它允许你使用接口模仿 JavaScript 的可扩展性。
+
+// Lib a.d.ts
+interface Point {
+    x: number,
+    y: number
+  }
+declare const myPoint: Point
+  
+// Lib b.d.ts
+interface Point {
+    z: number
+}
+  
+// Your code
+let myPoint.z // Allowed!
+
+// 通过上面可以明白，接口可以增加扩展性，又不会影响到性能，所以使用接口了。
+*/  
+
+/*
+// 类可以实现接口
+
+interface Point {
+  x: number;
+  y: number;
+}
+
+class MyPoint implements Point {
+  x: number;
+  y: number; // Same as Point
+}
+
+基本上在 implements（实现） 的存在下，该外部 Point 接口的任何更改都将导致代码库中的编译错误，因此可以轻松地使其保持同步：
+
+interface Point {
+  x: number;
+  y: number;
+  z: number; // New member
+}
+
+class MyPoint implements Point {
+  // ERROR : missing member `z`
+  x: number;
+  y: number;
+}
+
+
+
+*/
+
