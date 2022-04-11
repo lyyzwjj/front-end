@@ -6,9 +6,6 @@ vsc.xml
 .DS_Store
 c.TS/*.js
 
-
-
-
 node_modules
 /dist
 
